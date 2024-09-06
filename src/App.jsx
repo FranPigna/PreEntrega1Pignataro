@@ -1,10 +1,12 @@
 import './App.css'
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Contacto from "./pages/Contacto";
 import Productos from "./pages/Productos";
 import Error from "./pages/Error";
 import ItemCount from "./components/ItemCount/ItemCount"
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+
 
 
 function App() {
@@ -17,8 +19,10 @@ function App() {
               <Route path="*" element={<Error/>}/>
             </Route>
           </Routes>
+          <ItemListContainer/>
+          <ItemDetailContainer/>
           </BrowserRouter>
-  )
+  );
 }
 
 export default App;
