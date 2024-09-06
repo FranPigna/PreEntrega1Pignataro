@@ -1,14 +1,24 @@
 import './App.css'
-import { NavBar } from "./components/NavBar/NavBar"
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer"
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Contacto from "./pages/Contacto";
+import Productos from "./pages/Productos";
+import Error from "./pages/Error";
+import ItemCount from "./components/ItemCount/ItemCount"
+
 
 function App() {
   return (
-    <>
-    <NavBar/>
-    <ItemListContainer mensaje= "" />
-    </>
+          <BrowserRouter>
+           <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
+          <Routes>
+            <Route path= "/suspension" element={<Productos/>}>
+              <Route path= "contacto" element={<Contacto/>}/>
+              <Route path="*" element={<Error/>}/>
+            </Route>
+          </Routes>
+          </BrowserRouter>
   )
 }
 
-export default App
+export default App;
