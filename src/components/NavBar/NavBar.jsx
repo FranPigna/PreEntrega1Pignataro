@@ -1,5 +1,4 @@
 import { CartWidget } from "./components/CartWidget";
-import Logo from '../../img/castor-suspensoes-logo.png';
 import './NavBar.css';
 import { Link } from "react-router-dom";
 
@@ -8,8 +7,9 @@ import { Link } from "react-router-dom";
 function NavBar () {
     return (
 <nav>
-  <Link to="/suspension">Productos</Link>
-  <Link to="/suspension/contacto">Contacto</Link>
+<img src="https://i.ibb.co/YtJGcxt/castor-suspensoes-logo.png" alt="castor-suspensoes-logo" border="0" className="imglogo"/>
+  <Link to="/suspension">PRODUCTOS</Link>
+  <Link to="/suspension/contacto">CONTACTO</Link>
   <CartWidget/>
 </nav>
 );

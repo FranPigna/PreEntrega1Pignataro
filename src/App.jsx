@@ -12,15 +12,17 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 function App() {
   return (
           <BrowserRouter>
-           <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
-          <Routes>
+           
+           <Routes>
             <Route path= "/suspension" element={<Productos/>}>
               <Route path= "contacto" element={<Contacto/>}/>
               <Route path="*" element={<Error/>}/>
             </Route>
           </Routes>
+          <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)}/>
           <ItemListContainer/>
           <ItemDetailContainer/>
+          <footer className='foot'>INDUSTRIA CASTOR</footer>
           </BrowserRouter>
   );
 }

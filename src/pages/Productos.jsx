@@ -10,9 +10,6 @@ function Productos(){
     <NavBar/>
     <Outlet/>
     <Item/>
-    <footer>
-        <p></p>
-    </footer>
 </main>
     )
 }
