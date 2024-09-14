@@ -9,7 +9,7 @@ const NavBar = () => {
       <img src="https://i.ibb.co/YtJGcxt/castor-suspensoes-logo.png" alt="castor-suspensoes-logo" border="0" className="imglogo"/>
       </Link>
       <div className='Categories'>
-        <NavLink to={`/category/suspension`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>SUSPENSIONES</NavLink>
+        <NavLink to={`/category/suspensiones`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>SUSPENSIONES</NavLink>
         <NavLink to={`/category/accesorios`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>ACCESORIOS</NavLink>
       </div>
       <CartWidget />

@@ -1,6 +1,52 @@
+*{
+        padding: 0;
+        margin: 0;
+}
+
 .Button:hover {
        cursor: pointer;
         color: black;
         background-color: grey;     
 }
+
+.Counter{
+        width: 35%;
+        padding: 10px;
+        text-align: center;
+       margin-left: 10px;
+       align-items:center ;
+       display: flex;
+       place-content: center;
+       flex-direction: column;
+}
+.Controls{
+display: flex;
+margin: 10px;
+
+}
+
+.Number{
+     margin: 15px;   
+}
+.Button{
+width: 50px;
+height: 50px;
+background-color: orangered;
+border-radius: 10%;
+
+}
+
+.Butt{
+        width: 140px;
+        height: 50px;
+        background-color: orangered;
+        border-radius: 10%;
+        align-items: center;
+}
+.Butt:hover {
+        cursor: pointer;
+         color: black;
+         background-color: grey;     
+ }
+
 
