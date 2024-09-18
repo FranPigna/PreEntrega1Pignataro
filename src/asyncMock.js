@@ -6,7 +6,7 @@ const products = [
         img:'https://i.ibb.co/dmVYQrB/fija.png',
         stock: 9,
         description: 'Suspensiones a medida a gusto del cliente',
-        category: 'Suspensiones'
+        category: 'suspensiones'
     },
     {
         id: '2',
@@ -15,7 +15,7 @@ const products = [
         img:'https://i.ibb.co/1mnYKxZ/regulable.png',
         stock: 13,
         description: 'Suspensiones con la capacidad de regular 10cm de altura',
-        category: 'Suspensiones'
+        category: 'suspensiones'
     },
     {
         id: '3',
@@ -24,7 +24,7 @@ const products = [
         img:'https://i.ibb.co/vhGgtMW/8mm2.png',
         stock: 5,
         description: 'La mejor suspension del mercado, con posibilidad de regular la altura instantaneamente',
-        category: 'Suspensiones'
+        category: 'suspensiones'
     },
     {
         id: '4',
@@ -33,7 +33,7 @@ const products = [
         img:'https://i.ibb.co/5597xzP/8mm.png',
         stock: 4,
         description: 'La mejor suspension del mercado, con posibilidad de regular la altura instantaneamente',
-        category: 'Suspensiones'
+        category: 'suspensiones'
     },
     {
         id: '5',
@@ -42,7 +42,7 @@ const products = [
         img:'https://i.ibb.co/XZ2gNgz/12mm.png',
         stock: 6,
         description: 'La mejor suspension del mercado, con posibilidad de regular la altura instantaneamente',
-        category: 'Suspensiones'
+        category: 'suspensiones'
     },
     {
         id: '6',
@@ -51,7 +51,7 @@ const products = [
         img:'https://i.ibb.co/PN8SM0M/compresor.png',
         stock: 22,
         description: 'Compresor Suspension Neumatica de 160psi',
-        category: 'Accesorios'
+        category: 'accesorios'
     },
     {
         id: '7',
@@ -60,7 +60,7 @@ const products = [
         img:'https://i.ibb.co/3NfBS9x/tanque.png',
         stock: 33,
         description: 'Tanque de aluminio para tu Suspension Neumatica, con capacidad de 11L',
-        category: 'Accesorios'
+        category: 'accesorios'
     },
 
     {
@@ -70,7 +70,7 @@ const products = [
         img:'https://i.ibb.co/7YX7K06/bolsa.png',
         stock: 30,
         description: 'Bolsa de aire para tu Suspension Neumatica, de la mejor calidad!',
-        category: 'Accesorios'
+        category: 'accesorios'
     },
     {
         id: '9',
@@ -79,7 +79,7 @@ const products = [
         img:'https://i.ibb.co/wSkPd3N/control.png',
         stock: 110,
         description: 'Control para tu suspension neumatica, compatible con todos los modulos',
-        category: 'Accesorios'
+        category: 'accesorios'
     },
 ]
 
@@ -102,7 +102,7 @@ export const getProductById = (productId) => {
 export const getProductsByCategory = (productCategory) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products.find(prod => prod.category === productCategory))
+            resolve(products.filter(prod => prod.category === productCategory))
         }, 500)
     })
 }
