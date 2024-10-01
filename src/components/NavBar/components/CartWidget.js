@@ -1,8 +1,15 @@
-
+import carrito from './assets/carrito.svg'
+import { useContext } from 'react'
+import { CartContext } from '../../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 export const CartWidget = () => {
-    return <>
-        <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" width="35px" height="35px" alt="carrito de compras" />
-        0
-    </>
+    const { totalQuantity } = useContext(CartContext)
+
+    return (
+    <Link to='/cart' className='CartWidget'>
+        <img className='CartImg' src={carrito} alt='cart-wdiget'/>
+        { totalQuantity }
+    </Link>
+    )
   }
