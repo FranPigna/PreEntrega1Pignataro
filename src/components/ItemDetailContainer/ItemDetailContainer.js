@@ -1,40 +1,32 @@
 import './ItemDetailContainer.css'
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect, useContext } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import { getDoc, doc, getFirestore } from 'firebase/firestore'
+import { CartContext } from '../../context/CartContext'
 import { useParams } from 'react-router-dom'
-import { getDoc, doc } from 'firebase/firestore'
-import { db } from '../../services/firebase/firebaseConfig'
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const [item, setItem] = useState({});
+    const { id } = useParams()
+    const { addItem } = useContext(CartContext)
 
-    const { itemId } = useParams()
-
+    const onAdd = (q) => {
+        addItem(item, q)
+    }
     useEffect(() => {
-        setLoading(true)
-
-        const docRef = doc(db, 'itemId, products')
-
+        const db = getFirestore()
+        const docRef = doc(db, "items", id)
         getDoc(docRef)
-        .then(response => {
-            const data = response.data()
-            const productAdapted = { id: response.id, ...data}
-            setProduct(productAdapted)
+        .then((snapshot) => {
+            setItem({
+                id: snapshot.id,
+                ...snapshot.data()
+            })
         })
-        .catch(error => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
-    }, [itemId])
-
+    }, [id])
     return(
-        <div className='ItemDetailContainer' >
-             <ItemDetail {...product} />
-        </div>
+       <ItemDetail item={item} onAdd={onAdd}/>
+
     )
 }
 
