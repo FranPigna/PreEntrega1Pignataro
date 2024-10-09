@@ -34,6 +34,9 @@ const ItemDetail = ({ item }) => {
                     Descripcion: {item.description}
                 </p>
                 <p className="Info">
+                    Stock: {item.stock}
+                </p>
+                <p className="Info">
                     Precio: ${item.price}
                 </p>
             </section>

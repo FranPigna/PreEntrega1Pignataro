@@ -1,0 +1,60 @@
+.Boton{
+   
+        text-decoration: none;
+        padding: 10px 25px;
+        font-weight: bold;    
+        color: black;
+        background-color: grey;
+        border-radius: 25px;
+        width: 25%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+}
+
+.Boton:hover {
+    cursor: pointer;
+    color: white;
+    background-color: orange;
+  }
+
+  .Boton{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+ 
+  }
+
+  .Boton1{
+   
+    text-decoration: none;
+    padding: 10px 25px;
+    font-weight: bold;    
+    color: black;
+    background-color: grey;
+    border-radius: 25px;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.Boton1:hover {
+cursor: pointer;
+color: white;
+background-color: orange;
+}
+
+.Contenedor{
+    display: flex;
+    justify-content: center;
+
+}
