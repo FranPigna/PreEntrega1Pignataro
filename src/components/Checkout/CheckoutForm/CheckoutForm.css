@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Formulario{
+width: 400px;
+background: #24303c;
+padding: 60px;
+margin: auto;
+margin-top: 100px;
+border-radius: 4px;
+color: white;
+margin-bottom: 100px;
+}
+
+.controls{
+width: 100%;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+}
+
+.BtFormulario{
+        text-decoration: none;
+        font-weight: bold;    
+        color: black;
+        background-color: grey;
+        border-radius: 25px;
+        width: 100%;
+        color: black;
+        font-weight: bold;
+        padding: 12px;
+        margin: 16px 0;
+}
+.BtFormulario:hover {
+    cursor: pointer;
+    color: white;
+    background-color: orange;
+    }

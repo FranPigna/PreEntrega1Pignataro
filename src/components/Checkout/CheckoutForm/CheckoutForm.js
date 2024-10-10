@@ -1,20 +1,21 @@
 import React from 'react'
+import './CheckoutForm.css'
 
 const Form = ({handleChage, submit, formData, error}) => {
     return (
-        <form onSubmit={submit}> 
+        <form className='Formulario' onSubmit={submit}> 
             {
                 Object.keys(formData).map((key, i) => (
                     <>
-                    <label htmlFor={key} kei={i}>Ingrese {key}</label>
-                    <input type="text" name={key} id={key} onChange={handleChage} />
+                    <label htmlFor={key} kei={i}>Ingrese su {key}:</label>
+                    <input className='controls' type="text" name={key} id={key} onChange={handleChage} />
                     {
                         error[key] && <span>{error[key]}</span>
                     }
                     </>
                 ))
             }
-            <button className=''>Crear orden</button>
+            <button className='BtFormulario'>Crear orden</button>
         </form>
     )
 }

@@ -3,15 +3,16 @@ import { CartContext } from '../../context/CartContext'
 import Form  from './CheckoutForm/CheckoutForm'
 import { collection, getFirestore, addDoc} from 'firebase/firestore'
 
+
 const Checkout = () => {
 
     const[buyer, setBuyer ] = useState({
-        name:"",
+        nombre:"",
         email: "",
     })
  
     const[error, setError ] = useState({
-        name:"",
+        nombre:"",
         email: "",
     })
  
@@ -28,7 +29,7 @@ const Checkout = () => {
         e.preventDefault()
         const localError = {}
         if(!buyer.name){
-            localError.name = "El nombre es obligatorio"
+            localError.nombre = "El nombre es obligatorio"
         }
         if(!buyer.email){
             localError.email = "El email es obligatorio"
@@ -59,10 +60,6 @@ const Checkout = () => {
     return(
         <div>
             <Form handleChage={handleChage} submit={submit} formData={buyer} error={error}/>
-            {
-                //cart.length > 0 &&
-                //<button className=''>Crear orden</button>
-            }
         </div>
     )
 }

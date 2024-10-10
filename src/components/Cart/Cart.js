@@ -5,7 +5,7 @@ import CartItem from '../CartItem/CartItem'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-    const { cart, clearCart, totalQuantity, total} = useContext(CartContext)
+    const { cart, clearCart, totalQuantity, total } = useContext(CartContext)
 
     if(totalQuantity === 0) {
         return (
