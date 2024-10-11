@@ -7,16 +7,18 @@ import { collection, getFirestore, addDoc} from 'firebase/firestore'
 const Checkout = () => {
 
     const[buyer, setBuyer ] = useState({
-        nombre:"",
+        name:"",
         email: "",
     })
  
     const[error, setError ] = useState({
-        nombre:"",
+        name:"",
         email: "",
     })
  
     const { cart } = useContext(CartContext)
+
+    const { total } = useContext(CartContext)
 
     const handleChage = (e) => {
        setBuyer({
@@ -29,7 +31,7 @@ const Checkout = () => {
         e.preventDefault()
         const localError = {}
         if(!buyer.name){
-            localError.nombre = "El nombre es obligatorio"
+            localError.name = "El nombre es obligatorio"
         }
         if(!buyer.email){
             localError.email = "El email es obligatorio"
@@ -49,7 +51,7 @@ const Checkout = () => {
         const purchase ={
             buyer,
             items: cart,
-            total: 2000,
+            total: total,
             date: new Date()
         }
         addDoc(orderCollection, purchase)
