@@ -2,6 +2,7 @@ import React from 'react'
 import './CheckoutForm.css'
 
 const Form = ({handleChage, submit, formData, error}) => {
+
     return (
         <form className='Formulario' onSubmit={submit}> 
             {
@@ -15,8 +16,10 @@ const Form = ({handleChage, submit, formData, error}) => {
                     </>
                 ))
             }
-            <button className='BtFormulario'>Crear orden</button>
+           <button className='BtFormulario'>Crear orden</button>
         </form>
+      
+        
     )
 }
 

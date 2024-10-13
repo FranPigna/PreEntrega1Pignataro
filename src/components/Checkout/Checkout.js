@@ -30,7 +30,7 @@ const Checkout = () => {
     const submit = (e) => {
         e.preventDefault()
         const localError = {}
-        if(!buyer.name){
+        if(!buyer.nombre){
             localError.name = "El nombre es obligatorio"
         }
         if(!buyer.email){
